@@ -1,1 +1,1 @@
-# It's example site for Avoid
+# This is an example of a website for Avoid
