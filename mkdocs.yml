@@ -6,4 +6,4 @@ nav:
   - About: about.md
 
 theme:
-  name: "material"
+  name: material
