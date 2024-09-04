@@ -1,0 +1,9 @@
+site_name: Example for Avroid
+
+nav:
+  - Home: index.md
+  - About: kubernetes.md
+  - Contact: about.md
+
+theme:
+  name: material
