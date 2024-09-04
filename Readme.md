@@ -1,0 +1,1 @@
+# It's example site for Avoid

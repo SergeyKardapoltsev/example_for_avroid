@@ -1,7 +1,0 @@
-# .vale/styles/Aspell.yml
-extends: spelling
-message: "Проверьте орфографию: '%s'"
-level: error
-scope: text
-ignorecase: false
-path: "aspell -l ru list"
