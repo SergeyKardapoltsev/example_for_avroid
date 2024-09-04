@@ -11,10 +11,10 @@
 
 На данном сайте для примера созданы три раздела (страницы):
 
-- главная страница (эта);
-- раздел [kubernetes](kubernetes.md);
-- раздел [about](about.md).
+- главная страница (эта) – Home;
+- раздел [Kubernetes](kubernetes.md);
+- раздел [About](about.md).
 
-В разделе [kubernetes](kubernetes.md) для примера описана инструкция по установке Prometheus exporter for Nimble SRT, который предназначен для сбора метрик с серверов Nimble Streamer, использующих протокол SRT (Secure Reliable Transport).
+В разделе [Kubernetes](kubernetes.md) для примера описана инструкция по установке Prometheus exporter for Nimble SRT, который предназначен для сбора метрик с серверов Nimble Streamer, использующих протокол SRT (Secure Reliable Transport).
 
-Раздел [about](about.md) – ещё одна страница для примера структуры проекта с документацией.
+Раздел [About](about.md) – ещё одна страница для примера структуры проекта с документацией.
