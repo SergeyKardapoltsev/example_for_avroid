@@ -27,7 +27,13 @@ jobs:
       run: |
         for file in $(find . -name '*.md'); do
           echo "Checking $file"
-          aspell check "$file"
+          # Выводит слова, которые не найдены в словаре
+          misspelled_words=$(aspell list < "$file")
+          if [ -n "$misspelled_words" ]; then
+            echo "Misspelled words in $file:"
+            echo "$misspelled_words"
+            exit 1
+          fi
         done
 
 
