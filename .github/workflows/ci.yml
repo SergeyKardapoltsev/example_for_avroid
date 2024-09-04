@@ -1,0 +1,36 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install LanguageTool
+      run: brew install languagetool
+
+    - name: Run LanguageTool
+      run: |
+        languagetool --language ru docs/index.md
+        languagetool --language ru docs/kubernetes.md
+        languagetool --language ru docs/about.md
+
+    - name: Install MkDocs
+      run: pip install mkdocs mkdocs-material
+
+    - name: Build MkDocs site
+      run: mkdocs build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
