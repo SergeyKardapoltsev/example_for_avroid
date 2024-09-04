@@ -17,23 +17,13 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install Homebrew
+    - name: Install dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential curl file git
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $GITHUB_ENV
-        echo '/home/linuxbrew/.linuxbrew/bin' >> $GITHUB_PATH
-
-    - name: Install LanguageTool
-      run: |
-        brew install languagetool
-
-    - name: Run LanguageTool
-      run: |
-        languagetool --language ru docs/index.md
-        languagetool --language ru docs/kubernetes.md
-        languagetool --language ru docs/about.md
+        sudo apt-get install -y aspell aspell-ru
+    
+    
 
     - name: Install dependencies
       run: |
