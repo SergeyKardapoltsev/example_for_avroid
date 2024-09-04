@@ -23,7 +23,7 @@ jobs:
         sudo apt-get install -y build-essential curl file git
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $GITHUB_ENV
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        echo '/home/linuxbrew/.linuxbrew/bin' >> $GITHUB_PATH
 
     - name: Install LanguageTool
       run: |
