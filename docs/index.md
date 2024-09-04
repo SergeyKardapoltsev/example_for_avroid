@@ -9,6 +9,6 @@
 -  сервис GitHub Actions в качестве CI/CD для автоматической сборки и публикации документации.
 - LanguageTool для проверки орфографии документации на русском языке перед сборкой документации и деплоем сайт. 
 
-В разделе [kubernetes](/Users/sergey/Desktop/Example_for_Avroid/my-docs/docs/kubernetes.md) для примера описана инструкция по установке Prometheus exporter for Nimble SRT, который предназначен для сбора метрик с серверов Nimble Streamer, использующих протокол SRT (Secure Reliable Transport).
+В разделе [kubernetes](kubernetes.md) для примера описана инструкция по установке Prometheus exporter for Nimble SRT, который предназначен для сбора метрик с серверов Nimble Streamer, использующих протокол SRT (Secure Reliable Transport).
 
-Раздел [about](/Users/sergey/Desktop/Example_for_Avroid/my-docs/docs/about.md) – ещё одна страница для примера структуры проекта с документацией.
+Раздел [about](about.md) – ещё одна страница для примера структуры проекта с документацией.
