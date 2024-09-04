@@ -25,7 +25,10 @@ jobs:
     
     - name: Check spelling with Aspell
       run: |
-        find . -name '*.md' | xargs aspell check
+        for file in $(find . -name '*.md'); do
+          echo "Checking $file"
+          aspell check "$file"
+        done
 
 
     - name: Install dependencies
